@@ -1,3 +1,4 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -16,6 +17,15 @@ android {
         versionName = "0.1"
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     buildFeatures {
         compose = true
     }
@@ -30,3 +40,4 @@ dependencies {
     implementation("androidx.compose.foundation:foundation")
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
+
